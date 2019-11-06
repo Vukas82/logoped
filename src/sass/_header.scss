@@ -1,5 +1,9 @@
 header {
     background: $headerColor;
+    z-index: 1000;
+
+    transition: all 0.7s ease-in-out;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.10);
 
     .header__top {
         min-height: 10px;
@@ -44,6 +48,7 @@ header {
             justify-content: space-between;
             display: flex;
             flex-direction: row;
+            z-index: 1000;
 
             ul {
                 width: 100%;
@@ -63,10 +68,13 @@ header {
                     padding: 0;
                     padding-bottom: 13px;
                     z-index: 100;
+                    // padding-top: 50px;
+
 
 
                     a {
                         text-decoration: none;
+                        padding: 60px 120px;
 
                         h2 {
                             color: $white;
@@ -80,7 +88,7 @@ header {
                             letter-spacing: 0.4px;
                             display: block;
                             font-weight: 700;
-                            padding: 0 33px;
+                            padding: 0px 33px;
 
                         }
 
@@ -88,13 +96,32 @@ header {
                     }
 
 
+
                 }
+
+                li:nth-child(2) {
+                    padding-top: 30px;
+                    padding-bottom: 40px;
+
+                    .dropdown {
+                        .dropdown-content {
+                            a {
+                                // padding: 60px 120px;
+
+                                h2 {
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
 
                 li:hover {
 
                     background-color: $hover;
 
-                    padding-top: 50px;
+                    padding-top: 40px;
                     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.10);
                     padding-bottom: 20px;
                     border-radius: 0px 0px 5px 5px;
@@ -182,12 +209,15 @@ header {
                         left: -30px;
                         top: 142%;
                         background-color: $dropDown;
-                        min-width: 90px;
+                        min-width: 200px;
                         // border: 1px solid #fff;
                         border-radius: 4px;
-                        z-index: 1;
+                        z-index: 1000;
+                        border: 1px solid #fff;
 
                         a {
+                            border-bottom: 1px solid #fff;
+
                             h2 {
                                 color: $white;
                                 font-size: 1em;
@@ -233,8 +263,10 @@ header {
                     /* Change color of dropdown links on hover */
                     .dropdown-content a:hover {
                         background-color: $headerColor;
-                        border: 1px solid #fff;
-                        width: 100%;
+                        // border: 1px solid #fff;
+                        border-left: 1px solid #fff;
+                        border-right: 1px solid #fff;
+                        width: 85%;
                         transition: all .2s ease-in-out;
 
                     }

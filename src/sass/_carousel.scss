@@ -24,7 +24,8 @@
 
 .carousel-div {
     position: absolute;
-    left: 50%;
+    // left: 50%;
+    left: 10%;
     top: 220px;
     height: 200px;
     width: 500px;
@@ -324,18 +325,21 @@
 }
 
 .carousel__button--left {
-    left: 10%;
+    left: 100px;
+    top: 50%;
     z-index: 1;
     animation: innerImg 1s forwards;
+    transform: rotate(180deg) translateY(50%);
 }
 
 .carousel__button--right {
-    right: calc(10% - 70px);
+    right: 100px;
+    top: 50%;
     animation: innerImg 1s forwards;
 }
 
 .carousel__button img {
-    width: 60px;
+    width: 45px;
 }
 
 .carousel .carousel__nav {

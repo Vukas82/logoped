@@ -35,10 +35,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-top: 50px;
+        margin-top: 60px;
 
         .img {
-            width: 35%;
+            width: 40%;
             height: 300px;
             border-top-left-radius: 70px;
             border-top-right-radius: 20px;
@@ -56,9 +56,43 @@
         }
 
         .text {
-            width: 65%;
+            width: 60%;
             padding: 20px 40px;
             text-align: justify;
+
+            h4 {
+                font-family: 'Baloo', sans-serif;
+                font-size: 40px;
+                margin-top: 0px;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                font-weight: 700;
+                list-style: none;
+                color: #666;
+                font-size: 16px;
+                line-height: 30px;
+                padding-left: 0;
+
+
+                li {
+                    // padding-left: 10px;
+                }
+
+                li:before {
+                    content: "";
+                    background: url(../images/logoped-logopedski-tretmani-logoped-borča-pencil.svg);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding-right: 20px;
+                    margin-right: 10px;
+                }
+            }
         }
     }
 }
