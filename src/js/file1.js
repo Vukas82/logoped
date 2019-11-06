@@ -224,7 +224,45 @@ dotsNav.addEventListener('click', e => {
 
 // When the user scrolls the page, execute myFunction 
 window.onscroll = function () {
-    stickyHeader()
+    stickyHeader();
+
+
+
+    var home = document.getElementById("home");
+    var services = document.getElementById("services");
+    var oNama = document.getElementById("o nama"); // samo za promenu klase
+    var usluge = document.getElementById("usluge");
+    var sectionONama = document.getElementById("section o nama");
+    // var test0 = services.offsetTop;
+    var test = services.offsetTop;
+    var onamaPozicija = sectionONama.offsetTop;
+    var trenutnaPozicija = document.documentElement.scrollTop
+    console.log(test)
+    console.log(onamaPozicija)
+    console.log(trenutnaPozicija)
+    if (trenutnaPozicija < test - 200) {
+        home.classList.add("hover");
+        usluge.classList.remove("hover");
+
+    }
+    if (trenutnaPozicija > test - 200) {
+        home.classList.remove("hover");
+        // dodati listu za 
+        usluge.classList.add("hover");
+        console.log('home')
+        oNama.classList.remove("hover");
+
+
+    }
+    if (trenutnaPozicija > onamaPozicija - 100) {
+        console.log('onama')
+        usluge.classList.remove("hover");
+
+        oNama.classList.add("hover");
+    } else if (trenutnaPozicija < onamaPozicija - 100) {
+        oNama.classList.remove("hover");
+    }
+
 };
 
 
@@ -247,6 +285,7 @@ function stickyHeader() {
 
     }
 }
+
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyHeaderRefense() {

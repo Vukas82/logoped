@@ -15,3 +15,12 @@ $greenColor: #19aa5f;
     top: -13px;
     width: 100%;
 }
+
+.hover {
+    background-color: #E21C3F;
+    padding-top: 40px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    border-radius: 0px 0px 5px 5px;
+    transition: all .2s ease-in-out;
+}
